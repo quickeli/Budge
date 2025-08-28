@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "Groceries",
+    "Restaurants",
+    "Housing",
+    "Transport",
+    "Family",
+    "Personal",
+    "Other"
+  ],
+  "budgets": {},
+  "firebase_url": ""
+}

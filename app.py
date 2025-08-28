@@ -828,4 +828,9 @@ def clear_all():
 if __name__ == "__main__":
     ensure_config()
     print("Starting Budge (Flask + HTMX). DB:", DB_PATH, "Config:", CONFIG_PATH)
-    app.run(host="0.0.0.0", port=8000, debug=True)
+    
+    import os
+    port = int(os.environ.get("PORT", 8000))
+    debug = os.environ.get("FLASK_ENV") != "production"
+    
+    app.run(host="0.0.0.0", port=port, debug=debug)
